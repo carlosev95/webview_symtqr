@@ -18,8 +18,5 @@ class MainActivity : AppCompatActivity() {
         webView.loadUrl("https://demoqr.symt.mx/")
         webView.settings.javaScriptEnabled = true
         webView.settings.setSupportZoom(true)
-
-        //visor.loadUrl("https://google.com/")
-
     }
 }
