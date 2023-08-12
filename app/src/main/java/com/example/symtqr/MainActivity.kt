@@ -25,6 +25,6 @@ class MainActivity : AppCompatActivity() {
         val settings:WebSettings = visor.settings
         settings.javaScriptEnabled = true
 
-        visor.loadUrl("https://www.google.com")
+        visor.loadUrl("192.168.100.4:8000")
     }
 }
