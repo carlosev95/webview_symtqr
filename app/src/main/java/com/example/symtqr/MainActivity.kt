@@ -25,6 +25,9 @@ class MainActivity : AppCompatActivity() {
         val settings:WebSettings = visor.settings
         settings.javaScriptEnabled = true
 
-        visor.loadUrl("192.168.100.4:8000")
+
+
+        //visor.loadUrl("https://google.com/")
+        visor.loadUrl("https://demoqr.symt.mx/")
     }
 }
