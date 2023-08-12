@@ -12,22 +12,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val visor = findViewById<WebView>(R.id.web)
+        val webView = findViewById<WebView>(R.id.webView)
 
-        visor.webChromeClient = object : WebChromeClient(){
-
-        }
-
-        visor.webViewClient = object : WebViewClient(){
-
-        }
-
-        val settings:WebSettings = visor.settings
-        settings.javaScriptEnabled = true
-
-
+        webView.webViewClient = WebViewClient()
+        webView.loadUrl("https://demoqr.symt.mx/")
+        webView.settings.javaScriptEnabled = true
+        webView.settings.setSupportZoom(true)
 
         //visor.loadUrl("https://google.com/")
-        visor.loadUrl("https://demoqr.symt.mx/")
+
     }
 }
