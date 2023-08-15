@@ -8,15 +8,24 @@ import android.webkit.WebView
 import android.webkit.WebViewClient
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var webView: WebView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val webView = findViewById<WebView>(R.id.webView)
+        webView = findViewById<WebView>(R.id.webView)
 
         webView.webViewClient = WebViewClient()
         webView.loadUrl("https://demoqr.symt.mx/")
         webView.settings.javaScriptEnabled = true
         webView.settings.setSupportZoom(true)
+    }
+
+    override fun onBackPressed() {
+        if (webView.canGoBack()){
+            webView.goBack()
+        } else {
+            super.onBackPressed()
+        }
     }
 }
